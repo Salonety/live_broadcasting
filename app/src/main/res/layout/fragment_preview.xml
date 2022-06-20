@@ -37,8 +37,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/circle_shape"
             android:contentDescription="@string/mute_audio_source"
-            android:minWidth="50dp"
-            android:minHeight="50dp"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:padding="2dp"
             android:src="@drawable/ic_baseline_mic_off_24" />
 
