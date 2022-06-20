@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "345900364124",
+    "firebase_url": "https://live-broadcasting-7548e-default-rtdb.firebaseio.com",
+    "project_id": "live-broadcasting-7548e",
+    "storage_bucket": "live-broadcasting-7548e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345900364124:android:2c687df3de0a339aa51199",
+        "android_client_info": {
+          "package_name": "com.example.live_broadcasting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345900364124-vq21ra6k6evqk4h0d8s1hm7s7vidmclf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6z6pqCWQtUCeabPxUZ8Ny92DGbmda1FE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345900364124-vq21ra6k6evqk4h0d8s1hm7s7vidmclf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
