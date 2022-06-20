@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">live_broadcasting</string>
+    <string name="exit">action_logout</string>
 </resources>
