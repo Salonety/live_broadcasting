@@ -47,8 +47,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation platform('com.google.firebase:firebase-bom:30.1.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'video.api:android-live-stream:1.0.3'
-    implementation 'video.api:android-api-client:1.0.5'
+
 
 }
 
