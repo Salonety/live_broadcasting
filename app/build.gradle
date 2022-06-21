@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation 'video.api:android-kotlin-sdk:0.1.7'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
@@ -47,8 +48,10 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:30.1.0')
     implementation 'com.google.firebase:firebase-analytics-ktx'
     implementation 'video.api:android-live-stream:1.0.3'
+    implementation 'video.api:android-api-client:1.0.5'
 
 }
+
 apply plugin: 'com.android.application'
 android {
     buildTypes {
