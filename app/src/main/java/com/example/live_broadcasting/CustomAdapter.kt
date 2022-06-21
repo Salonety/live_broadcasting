@@ -1,7 +1,5 @@
 package com.example.live_broadcasting
 
-import android.content.Context
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
+    private var mOnClickListener: ListItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -23,9 +22,7 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         val ItemsViewModel = mList[position]
         holder.imageView.setImageResource(ItemsViewModel.image)
         holder.textView.text = ItemsViewModel.text
-        holder.itemView.setOnClickListener {
 
-        }
 
     }
 
@@ -38,6 +35,10 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
         val imageView: ImageView = itemView.findViewById(R.id.imageview)
         val textView: TextView = itemView.findViewById(R.id.textView)
 
+    }
+
+    fun CustomAdapter(onClickListener: ListItemClickListener?) {
+        mOnClickListener = onClickListener
     }
 }
 
