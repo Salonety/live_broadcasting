@@ -37,8 +37,6 @@ class CustomAdapter(private val mList: List<ItemsViewModel>) : RecyclerView.Adap
 
     }
 
-    fun CustomAdapter(onClickListener: ListItemClickListener?) {
-        mOnClickListener = onClickListener
-    }
 }
+
 
