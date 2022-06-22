@@ -1,9 +1,12 @@
 package com.example.live_broadcasting
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.style.ClickableSpan
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +15,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(),onLiveClick {
     private lateinit var mAuth: FirebaseAuth
     private lateinit var RecyclerView: RecyclerView
     private lateinit var mList: ArrayList<ItemsViewModel>
@@ -21,11 +24,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var CustomAdapter=CustomAdapter(mList,this)
         mAuth=FirebaseAuth.getInstance()
         mDbRef= FirebaseDatabase.getInstance().getReference()
 
         val recyclerview = findViewById<RecyclerView>(R.id.recyclerview)
         recyclerview.layoutManager = LinearLayoutManager(this)
+        CustomAdapter.notifyDataSetChanged()
         val data = ArrayList<ItemsViewModel>()
 
 
@@ -36,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // This will pass the ArrayList to our Adapter
-        val adapter = CustomAdapter(data)
+
 
         // Setting the Adapter with the recyclerview
         recyclerview.adapter = adapter
@@ -59,6 +64,12 @@ class MainActivity : AppCompatActivity() {
 
         }
         return true
+    }
+
+    override fun onLiveItemClicked(position: Int) {
+    val intent=Intent(this,broadcast::class.java)
+        intent.putExtra("game",mList[position].text)
+        startActivity(intent)
     }
 
 }
